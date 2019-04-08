@@ -1,4 +1,4 @@
-
+import axios from 'axios';
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -20,7 +20,13 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Parent component
+Vue.component('parent-component', require('./components/ParentComponent.vue').default);
+
+Vue.component('side-component', require('./components/SideComponent.vue').default);
+Vue.component('body-component', require('./components/BodyComponent.vue').default);
+Vue.component('navigation-component', require('./components/NavigationComponent.vue').default);
+Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
